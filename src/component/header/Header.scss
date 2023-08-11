@@ -1,1 +1,38 @@
-@import '../../component/Components.scss'
+@import '../../component/Components.scss';
+
+.headerTop{
+    display:block;
+    width:100%;
+    background-color:$black;    
+    .mx_width{
+        justify-content: space-between;
+        height:40px;
+        @extend .small_text;
+        color:$grey;
+        span{
+            cursor:pointer;
+            transition: color .3s ease-in-out;
+            &:hover{
+                color:$white;
+            }
+        }
+        .rightSection{
+            span{
+                +span{
+                    margin-left:16px;
+                }
+            }
+        }
+    }
+}
+
+.headerMiddle{
+    display:block;
+    background-color: $white;
+    .mx_width{
+        justify-content: space-between;
+        padding:35px 0 60px 0;
+        @extend .small_text;
+        color:$text_color;
+    }
+}

@@ -6,7 +6,6 @@ import {NavLink} from 'react-router-dom';
 const Menu = () => {
   return (
     <div className='navigation'>
-      <nav>
         <ul>
           <li><NavLink to="/bestSellers">Best Sellers</NavLink></li>
           <li><NavLink to="/new-arrivals">New Arrivals</NavLink></li>
@@ -17,7 +16,6 @@ const Menu = () => {
           <li><NavLink to="/other-jewellery">Other Jewellery</NavLink></li>
           <li><NavLink to="/gifting">Gifting</NavLink></li>
         </ul>
-      </nav>
       <Search/>
     </div>
   )

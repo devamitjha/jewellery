@@ -1,0 +1,14 @@
+@import '../../component/Components.scss';
+.hero_image{
+    display:block;
+    width:100%;
+    img{
+        display: block;
+        width:100%;
+    }
+}
+.mx_width{
+    &.themeContainer{
+        justify-content: space-between;
+    }
+}
