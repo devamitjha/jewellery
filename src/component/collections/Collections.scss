@@ -1,0 +1,19 @@
+@import '../Components.scss';
+.collection_container{
+    @extend .d_flex;
+    width:100%;
+    justify-content: space-between;
+    .collection_item{
+        display:block;
+        .coeection_item_img{
+            @extend .d_flex;
+            align-items: center;
+            +.coeection_item_img{
+                margin-top:15px;
+            }            
+            img{
+                display:block;
+            }
+        }
+    }
+}

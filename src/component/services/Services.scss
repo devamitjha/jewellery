@@ -1,0 +1,70 @@
+@import '../Components.scss';
+
+.specialGift{
+    @extend .d_flex;
+    width:100%;
+    justify-content: space-between;
+    .gift_item{
+        @extend .d_flex;
+    }
+    .service_img{
+        margin-right: 15px;
+        cursor:pointer;
+        position:relative;
+        span{
+            background: $primary_color;
+            background-repeat: no-repeat;
+            height: 70px;
+            width: 70px;
+            border-radius: 50px;
+            display: block;
+            background-position: center 16px;
+            transition: all 600ms ease;
+        }        
+        &:after{
+            content: "";
+            height: 68px;
+            width: 68px;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            position: absolute;
+            border-radius: 50%;
+            border: 1px dashed $primary_color;
+            transition: all 0.5s ease-in-out;
+            animation: spinAround 9s linear infinite;
+            transform:translate(-50%,-50%);
+        }
+        &:hover{
+            span{
+                background: $black;
+                background-position: center -53px;
+            }
+            &:after{
+                opacity: 1;
+                animation: spinAround 9s linear infinite;
+            }
+        }
+    }
+
+    @keyframes spinAround {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    .service_header{
+        .item_title{
+            @extend .body_text;
+            text-transform: uppercase;
+            margin-bottom:5px;
+        }
+        .item_subtitle{
+            @extend .small_text;
+            color:$text_color;
+        }
+    }
+    
+}

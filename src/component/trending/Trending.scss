@@ -1,0 +1,56 @@
+@import '../Components.scss';
+
+.trending_container{
+    display:block;
+    width:100%;
+    .title_container{
+        @extend .d_flex;
+        width:100%;
+        margin-bottom:30px;
+        .heading_container{
+            @extend .heading_4;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+    }
+
+    .tab_container{
+        @extend .d_flex;
+        width:100%;
+        flex-direction: column;
+        .tab_item{
+            @extend .d_flex;
+            margin-bottom:10px;
+            .tab{
+                padding:10px 15px;
+                @extend .body_text;
+                color:$accent;
+                text-transform: uppercase;
+                &.active{
+                    background-color:$primary_color;
+                    color:$black;
+                }
+                &:hover{
+                    cursor:pointer;
+                }
+            }
+        }
+        .tab_content{
+            display:block;
+            width:100%;
+            margin-top:10px;
+            .product_card_container{
+                @extend .d_flex;
+                width:100%;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap:15px;
+                .product_card{
+                    width:24%;
+                    background-color:#eee;
+                    height:350px;
+                }
+            }
+        }
+    }
+}

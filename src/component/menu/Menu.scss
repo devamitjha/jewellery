@@ -10,6 +10,8 @@
     width:100%;
     justify-content: center;  
     background-color: $white; 
+    padding:5px;
+    border-radius: 5px;
         ul{
             @extend .d_flex;
             justify-content: flex-start;

@@ -10,5 +10,6 @@
 .mx_width{
     &.themeContainer{
         justify-content: space-between;
+        flex-direction: column;
     }
 }

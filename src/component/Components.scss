@@ -8,9 +8,10 @@ $warning_color:#ffc107;
 $danger_color:#dc3545;
 $black:#000;
 $white:#fff;
-$accent:#b1b1b3;
+$accent:#666;
 $grey:#999;
 $text_color:#666;
+$outline:#ebebeb;
 *{
     margin:0;
     padding:0;
@@ -27,6 +28,9 @@ $text_color:#666;
     width:90%;    
     margin:0 auto;
     @extend .d_flex;
+}
+.m_70{
+    margin-bottom:70px;
 }
 //typo
 .heading_1{
@@ -60,7 +64,7 @@ $text_color:#666;
     font-family:$poppins;
     font-weight:700;
     font-size:25px;
-    letter-spacing: -.75px;
+    letter-spacing:1px;
     @media(max-width:768px){
         font-size:18px;
     }
