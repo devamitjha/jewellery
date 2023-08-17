@@ -1,0 +1,34 @@
+@import '../Components.scss';
+.paralax_banner{    
+    .paralax_item{
+        padding:120px 0;
+        background-color:#eee;  
+        height:400px;      
+        img{
+            display: block;
+            width:100%;
+        }
+        .paralax_content{
+            @extend .d_flex;           
+            justify-content: flex-start;
+            .paralax_list{
+                @extend .d_flex;
+                flex-direction: column;
+                .parallax_title{
+                    @extend .title_sm;
+                    margin-bottom: 25px;
+                    padding-bottom: 20px;
+                }
+                .parallax_subtitle{
+                    @extend .heading_3;
+                    margin-bottom: 10px;
+                }
+                .parallax_desc{
+                    @extend .body_text;
+                    margin-bottom: 25px;
+                }
+            }
+           
+        }
+    }
+}

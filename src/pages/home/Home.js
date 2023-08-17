@@ -3,6 +3,8 @@ import './Home.scss';
 import Services from '../../component/services/Services';
 import Trending from '../../component/trending/Trending';
 import Collections from '../../component/collections/Collections';
+import { Banner } from '../../component/banner/Banner';
+import Blog from '../../component/blog/Blog';
 
 const Home = () => {
   return (
@@ -13,7 +15,13 @@ const Home = () => {
       <div className="mx_width themeContainer">
         <Services/>
         <Trending/>
-        <Collections/>
+        <Collections/>        
+      </div>
+      <div className="fluid">
+        <Banner/>
+      </div>
+      <div className="mx_width themeContainer">
+        <Blog/>
       </div>
     </>
   )

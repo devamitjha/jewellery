@@ -1,0 +1,42 @@
+@import '../Components.scss';
+.blog_container{
+    @extend .d_flex;
+    width:100%;
+    justify-content: space-between;
+    .blog_card{
+        width:calc(33.33% - 20px);
+        border:1px solid $outline;
+        border-radius: 8px;
+        overflow: hidden;
+        position:relative;
+        .card_image{
+            display:block;
+            width:100%;
+            img{
+                display:block;
+                width:100%;
+            }
+        }
+        .card_caontainer{
+            padding:30px;
+            .card_title{
+                @extend .heading_4;
+            }
+            .card_content{
+                @extend .body_text;
+            }
+        }
+        .share{
+            padding:0 30px;
+            @extend .d_flex;
+        }
+        .label{
+            position:absolute;
+            top:0;
+            right:0;
+            padding:8px;
+            background-color:#eee;
+            z-index:2;
+        }
+    }
+}

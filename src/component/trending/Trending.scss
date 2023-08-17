@@ -40,13 +40,18 @@
             width:100%;
             margin-top:10px;
             .product_card_container{
-                @extend .d_flex;
-                width:100%;
-                justify-content:flex-start;
-                flex-wrap: wrap;
-                gap:20px;
+                --auto-grid-min-size: 16rem;  
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+                grid-gap: 1rem;
+                @media(max-width:600px){
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                @media(max-width:360px){
+                    grid-template-columns: 1fr;
+                }
                 .card{
-                    width:calc(25% - 20px);
+                    width:100%;
                     margin-bottom:0;
                     background-color:#eee; 
                     border:1px solid $outline;      
@@ -55,13 +60,7 @@
                         overflow: hidden;  
                         border:0.75px solid #3333331a;
                         position: relative;
-                        transition: all .4s ease 0s;
-                        @media(max-width:1180px){
-                            width:calc(33.33% - 20px);
-                        }
-                        @media(max-width:820px){
-                            width:calc(50% - 20px);
-                        }
+                        transition: all .4s ease 0s;                        
                         &:hover{
                             transform: translateY(-5px);
                             box-shadow: 0 8px 20px #dedede;                

@@ -17,7 +17,7 @@ const ProductCard = (props) => {
 
   const handleTabClick = (tabName, clickFunction) => {
     setActiveTab(tabName);
-    clickFunction(); // Execute the provided click function
+    clickFunction();
   };
 
   return (

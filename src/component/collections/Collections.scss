@@ -1,18 +1,31 @@
 @import '../Components.scss';
 .collection_container{
-    @extend .d_flex;
+    // --auto-grid-min-size: 32rem;  
+    // display: grid;
+    // grid-template-columns: repeat(auto-fill, minmax(var(--auto-grid-min-size), 1fr));
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
     width:100%;
-    justify-content: space-between;
+    @media(max-width:550px){
+        display:block;
+    }
     .collection_item{
         display:block;
         .coeection_item_img{
             @extend .d_flex;
             align-items: center;
             +.coeection_item_img{
-                margin-top:15px;
-            }            
+                margin-top:15px;                
+            }  
+            @media(max-width:550px){
+                margin-bottom:15px;
+                margin-top:0!important;
+            }          
             img{
                 display:block;
+                width:100%;
+                object-fit: cover;
             }
         }
     }
