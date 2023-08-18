@@ -107,5 +107,16 @@ $outline:#ebebeb;
     }
 }
 
+.btn{
+    max-width:250px;
+    width:100%;
+    height:56px;
+    border-radius: 8px;
+    background-color:$primary_color;
+    color:$black;
+    @extend .d_flex;
+    @extend .small_text;
+}
+
 
 

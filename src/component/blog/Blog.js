@@ -1,5 +1,7 @@
 import React from 'react';
 import './Blog.scss';
+import { AiOutlineShareAlt } from "react-icons/ai";
+import { IconContext } from "react-icons";
 
 const Blog = () => {
   return (
@@ -15,7 +17,11 @@ const Blog = () => {
           </div>
         </div>
         <div className="share">
-          share
+          <div className="icon_container">
+            <IconContext.Provider value={{className: "icon" }}>
+              <AiOutlineShareAlt />
+            </IconContext.Provider>
+          </div>
         </div>
         <div className="label">Trending</div>
       </div>
@@ -30,9 +36,13 @@ const Blog = () => {
           </div>
         </div>
         <div className="share">
-          share
+          <div className="icon_container">
+            <IconContext.Provider value={{className: "icon" }}>
+              <AiOutlineShareAlt />
+            </IconContext.Provider>
+          </div>
         </div>
-        <div className="label">Trending</div>
+        <div className="label">Fashion</div>
       </div>
       <div className="blog_card">
         <div className="card_image">
@@ -45,9 +55,13 @@ const Blog = () => {
           </div>
         </div>
         <div className="share">
-          share
+          <div className="icon_container">
+            <IconContext.Provider value={{className: "icon" }}>
+              <AiOutlineShareAlt />
+            </IconContext.Provider>
+          </div>
         </div>
-        <div className="label">Trending</div>
+        <div className="label">Lifestyle</div>
       </div>
     </div>
   )

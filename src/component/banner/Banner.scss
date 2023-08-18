@@ -15,17 +15,37 @@
                 @extend .d_flex;
                 flex-direction: column;
                 .parallax_title{
-                    @extend .title_sm;
+                    @extend .heading_4;
                     margin-bottom: 25px;
-                    padding-bottom: 20px;
+                    padding-bottom:10px;
+                    font-weight: 400;
+                    text-transform: uppercase;
+                    position: relative;
+                    &:after{
+                        content:"";
+                        width:50%;
+                        left:50%;
+                        bottom:0;
+                        height:1px;
+                        background-color:$text_color;
+                        position:absolute;
+                        transform:translateX(-50%);
+                    }
                 }
                 .parallax_subtitle{
-                    @extend .heading_3;
+                    @extend .heading_2;
                     margin-bottom: 10px;
+                    font-weight: 400;
                 }
                 .parallax_desc{
                     @extend .body_text;
                     margin-bottom: 25px;
+                    color:$text_color;
+                }
+                .btn{
+                    &.theme_button{
+                        text-decoration: none;
+                    }
                 }
             }
            

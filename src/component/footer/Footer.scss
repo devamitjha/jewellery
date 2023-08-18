@@ -1,0 +1,26 @@
+@import '../Components.scss';
+.footer_container{
+    display:block;
+    width:100%;
+    border-top: solid 1px $outline;
+    .mx_width{
+        &.footer_wapper{
+            justify-content: space-between;            
+            padding: 40px 0;
+            color:$text_color;
+            .copyright,
+            .backToTop{
+                font-size:12px;
+            }
+            .footer_social{
+                @extend .d_flex;
+                .icon_container{
+                    width:40px;
+                    height:40px;
+                    @extend .d_flex;
+                    cursor:pointer;
+                }
+            }
+        }
+    }
+}

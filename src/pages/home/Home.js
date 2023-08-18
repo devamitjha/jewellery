@@ -20,7 +20,7 @@ const Home = () => {
       <div className="fluid">
         <Banner/>
       </div>
-      <div className="mx_width themeContainer">
+      <div className="mx_width themeContainer m_70">
         <Blog/>
       </div>
     </>
