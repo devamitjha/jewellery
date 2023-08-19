@@ -9,20 +9,11 @@
         height:40px;
         @extend .small_text;
         color:$grey;
-        span{
-            cursor:pointer;
-            transition: color .3s ease-in-out;
-            &:hover{
-                color:$white;
-            }
+        .offer_seciton{
+            @extend .d_flex;
+            width:100%;
         }
-        .rightSection{
-            span{
-                +span{
-                    margin-left:16px;
-                }
-            }
-        }
+        
     }
 }
 

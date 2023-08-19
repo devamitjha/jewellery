@@ -1,56 +1,68 @@
 @import '../Components.scss';
 .blog_container{
-    @extend .d_flex;
-    width:100%;
-    justify-content: space-between;
-    .blog_card{
-        width:calc(33.33% - 20px);
-        border:1px solid $outline;
-        border-radius: 8px;
-        overflow: hidden;
-        position:relative;
-        .card_image{
-            display:block;
-            width:100%;
-            img{
-                display:block;
-                width:100%;
-            }
-        }
-        .card_caontainer{
-            padding:30px;
-            .card_title{
-                @extend .title_sm;
-                font-weight: 400;
-                margin-bottom:16px;
-            }
-            .card_content{
-                font-size:14px;
-                line-height: 1.5;
-                color:$text_color;
-            }
-        }
-        .share{
-            padding:0 30px 15px 30px;
-            @extend .d_flex;
-            justify-content: flex-start;
-            .icon_container{
-                width:40px;
-                height:40px;
-                @extend .d_flex;
-                cursor:pointer;
-            }
-        }
-        .label{
-            position:absolute;
-            top:16px;
-            right:-20px;
-            padding:8px;
-            background: linear-gradient(to right,#fe4f70 0%,#ffa387 51%,#fe4f70 100%);
-            z-index:2;
-            font-size:14px;
-            transform:rotate(-90deg);
-            color:$white;
+    .blog_post_title{
+        @extend .d_flex;
+        @extend .heading_4;
+        margin-bottom:30px;
+        h3{
+            font-weight: 600;
+            text-transform: uppercase;
         }
     }
+    .blog_list{
+        @extend .d_flex;
+        width:100%;
+        justify-content: space-between;
+        .blog_card{
+            width:calc(33.33% - 20px);
+            border:1px solid $outline;
+            border-radius: 8px;
+            overflow: hidden;
+            position:relative;
+            .card_image{
+                display:block;
+                width:100%;
+                img{
+                    display:block;
+                    width:100%;
+                }
+            }
+            .card_caontainer{
+                padding:30px;
+                .card_title{
+                    @extend .title_sm;
+                    font-weight: 400;
+                    margin-bottom:16px;
+                }
+                .card_content{
+                    font-size:14px;
+                    line-height: 1.5;
+                    color:$text_color;
+                }
+            }
+            .share{
+                padding:0 30px 15px 30px;
+                @extend .d_flex;
+                justify-content: flex-start;
+                .icon_container{
+                    width:40px;
+                    height:40px;
+                    @extend .d_flex;
+                    cursor:pointer;
+                }
+            }
+            .label{
+                position:absolute;
+                top:16px;
+                right:-20px;
+                padding:8px;
+                background: linear-gradient(to right,#fe4f70 0%,#ffa387 51%,#fe4f70 100%);
+                z-index:2;
+                font-size:14px;
+                transform:rotate(-90deg);
+                color:$white;
+            }
+        }
+    }
+
 }

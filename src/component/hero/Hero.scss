@@ -1,0 +1,42 @@
+@import '../Components.scss';
+.slider_container{
+    position:relative;
+    // .slick-arrow{
+    //     z-index:2;
+    //     &.slick-prev{
+    //         left:0;
+    //     }
+    //     &.slick-next{
+    //         right:0;
+    //     }
+    // }
+    .nextArrow,
+    .prevArrow{
+            width:56px;
+            height:56px;
+            @extend .d_flex;
+            background-color:$primary_color;
+            color:$black;
+            position:absolute;
+            z-index: 2;
+            cursor:pointer;
+            top:50%;
+            transform:translateY(-50%);
+            border-radius:100%;
+            .icon{
+                font-size:24px;
+                color:$text_color;
+            }
+            &:hover{
+                .icon{
+                    color:$black;
+                }
+            }
+    }
+    .nextArrow{
+        right:20px;
+    }
+    .prevArrow{
+        left:20px;
+    }
+}

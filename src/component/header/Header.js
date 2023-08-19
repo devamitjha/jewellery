@@ -9,13 +9,8 @@ const HeaderTop = ()=>{
   return(
     <div className='headerTop'>
         <div className='mx_width'>
-          <div className="leftSection">
-            <span>Order Tracking</span>
-          </div>
-          <div className="rightSection">
-            <span>Contact Us</span>
-            <span>Contact Us</span>
-            <span>Account</span>
+          <div className="offer_seciton">
+            <span>We offer safe and secure shipping.</span>
           </div>
         </div>
     </div>
