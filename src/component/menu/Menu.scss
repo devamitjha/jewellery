@@ -1,25 +1,22 @@
 @import '../../component/Components.scss';
 
 .navigation{
-    @extend .mx_width;
-    position:absolute;
-    bottom:-25px;
-    left:50%;
-    transform: translateX(-50%);
-    z-index:2;
+    //@extend .mx_width;
     width:100%;
     justify-content: center;  
     background-color: $white; 
     padding:5px;
     border-radius: 5px;
+    border-top:1px solid $outline;
+    border-bottom:1px solid $outline;
         ul{
             @extend .d_flex;
-            justify-content: flex-start;
+            justify-content: space-between;
             align-items: center;
             width:100%;
             list-style: none;
             li{   
-                height:50px;  
+                height:40px;  
                 @extend .d_flex;  
                 +li{
                     margin-left:25px;

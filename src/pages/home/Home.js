@@ -10,7 +10,7 @@ import Hero from '../../component/hero/Hero';
 const Home = () => {
   return (
     <>
-      <div class="hero_image m_70">
+      <div className="hero_image m_70">
         <Hero/>
       </div>
       <div className="mx_width themeContainer">

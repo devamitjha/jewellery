@@ -22,40 +22,79 @@
     background-color: $white;
     .mx_width{
         justify-content: space-between;
-        padding:35px 0 60px 0;
+        padding:35px 0;
         @extend .small_text;
         color:$text_color;
     }
-    .cart_info,
-    .email{
-        display:flex;
-        align-items: center;
+    .itel_left{
+        @extend .d_flex;
+        width:55%;
+        justify-content: flex-start;
+        .logo{
+            margin-right:50px;
+        }
+    }
+    .item_right{
+        @extend .d_flex;
+        justify-content:flex-end;
+        width:45%;
         .icon_container{
-            margin-right:8px;  
-            position:relative;          
-            .icon{
-                font-size:32px;
-                color:$accent;
-            }   
-            span{
-                width:20px;
-                height:20px;
-                background-color:$primary_color;
-                border-radius: 20px;
-                @extend .cart_info;
-                position:absolute;
-                top: -10px;
-                right: -10px;
-                color:$black;
-                @extend .d_flex;
-                font-size:12px;
-            }         
-        }
-        span{
-            @extend .body_text;
-        }
-        &:hover{
+            @extend .d_flex;
+            flex-direction: column;           
             cursor:pointer;
+            .icon_wrapper{
+                @extend .d_flex;
+                width:50px;
+                height:40px;
+                svg{
+                    font-size:24px;
+                }
+            }
+            span.icon{
+                @extend .d_flex;
+                width:50px;
+                height:40px;
+                img{
+                    width:30px;
+                }
+            }
+            span{
+                &.title{
+                    @extend .small_text;
+                    font-size:12px;
+                }
+            }
+            +.icon_container{
+                margin-left:16px;
+            }
+            &.relative_icon{
+                position:relative;
+                .total_item{
+                    @extend .d_flex;
+                    @extend .small_text;
+                    font-size:12px;
+                    width:20px;
+                    height:20px;
+                    border-radius: 100%;
+                    position:absolute;
+                    top:0;
+                    right:0;
+                    background-color:$primary_color;
+                }
+            }
+        }
+        .offers_contact{
+            @extend .d_flex;
+            margin-right:15px;
+            padding-right:15px;
+            border-right: 1px solid $outline;            
+        }
+        .profile_cart{
+            @extend .d_flex;
+            margin-right:15px;
+            padding-right:15px;
+            border-right: 1px solid $outline;
+
         }
     }
 }

@@ -1,20 +1,28 @@
 @import '../Components.scss';
 .search_container{
     position: relative;   
-    width:310px;
-    border:1px solid $outline;
+    width:100%;
     border-radius: 2px;
     @extend .d_flex;
-    justify-content: space-between;
+    justify-content: space-between; 
+    background-color:$light;   
     .inputContainer{
         width:100%;        
         height:50px;
-        padding:0 10px;
+        position:relative;
+        background-color:$light;
         input{
             outline: none;
             width:100%;
             height:100%;
             border:none;
+            padding-left:55px;
+            background-color: transparent;
+        }
+        .icon_container{
+            position:absolute;
+            top:0;
+            left:0;
         }
     }
     .icon_container{

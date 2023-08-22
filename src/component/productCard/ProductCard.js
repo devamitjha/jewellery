@@ -114,7 +114,7 @@ const ProductCard = (props) => {
                       )}                      
                     </div>
                     <div className="cart_container">
-                        <div class="cartContainer">
+                        <div className="cartContainer">
                             <IconContext.Provider
                             value={{ color: "black", className: "iconContainer" }}
                             >
