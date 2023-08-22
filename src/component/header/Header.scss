@@ -20,6 +20,10 @@
 .headerMiddle{
     display:block;
     background-color: $white;
+    a{
+        text-decoration: none;
+        color:$text_color;
+    }
     .mx_width{
         justify-content: space-between;
         padding:35px 0;
@@ -80,6 +84,111 @@
                     top:0;
                     right:0;
                     background-color:$primary_color;
+                }
+            }
+            &.profile{
+                position:relative;
+                .profile_container{
+                    background-color:$white;
+                    border-radius: 8px;
+                    left: 50%;
+                    position: absolute;
+                    top:110%;
+                    transform: translateX(-50%);
+                    width: 320px;
+                    z-index: 99;
+                    border: 1px solid $light;
+                    padding:30px 0 10px 0;
+                    opacity:0;
+                    visibility: hidden;
+                    transition:all .3s ease-in-out;
+                    .login_container{
+                        padding:0 16px;
+                        @extend .d_flex;
+                        justify-content: flex-start;
+                        width:100%;
+                        flex-direction: column;
+                        border-bottom:1px solid $outline;
+                        padding-bottom:16px;
+                        .title_container{
+                            width:100%;
+                            text-align: left;
+                            margin-bottom:16px;
+                            h4{
+                                font-weight: 600;
+                            }
+                            p{
+                                font-size:10px;
+                                color:$text_color;
+                                margin-top: 4px;
+                            }
+                        }
+                        .btn{
+                            &.login_btn{
+                                border-radius: 25px;
+                                height:45px;
+                                max-width:100%;
+                                background-color: $primary_color;
+                                transition:all .3s ease-in-out;
+                                text-decoration: none;
+                                span{
+                                    color:$black;
+                                    transition:all .3s ease-in-out;
+                                }
+                                &:hover{
+                                    background-color: $primary_color_dark;
+                                    span{
+                                        color:$white;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .profile_item_container{
+                        padding:4px 16px;
+                        @extend .d_flex;
+                        justify-content: space-between;
+                        text-decoration: none;
+                        color:$text_color;
+                        +.profile_item_container{
+                            border-top:1px solid $outline;
+                        }
+                        .icon_container{
+                            flex-direction: row;
+                            .icon_wrapper{
+                               svg{
+                                transition:all .3s ease-in-out;
+                               }
+                            }
+                            .small_text{
+                                transition:all .3s ease-in-out;
+                            }
+                        }
+                        .angle_right{
+                            width:50px;
+                            height:40px;
+                            @extend .d_flex;
+                            svg{
+                                font-size:22px;
+                                transition:all .3s ease-in-out;
+                            }
+                        }
+                        &:hover{
+                            svg{
+                                color: $primary_color_dark;
+                            }
+                            .small_text{
+                                color:$primary_color_dark;
+                            }
+                        }
+                    }
+                }
+                &:hover{
+                    .profile_container{
+                        visibility: visible;
+                        opacity:1;
+                        top:100%;
+                    }
                 }
             }
         }

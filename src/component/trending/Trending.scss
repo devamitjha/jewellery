@@ -27,8 +27,9 @@
                 color:$accent;
                 text-transform: uppercase;
                 &.active{
-                    background-color:$primary_color;
-                    color:$black;
+                    background-color:$primary_color_dark;
+                    color:$white;
+                    border-radius: 6px;
                 }
                 &:hover{
                     cursor:pointer;
