@@ -9,10 +9,10 @@ const Trending = () => {
   const [allProducts] = useState(DummyData);
 
   const allProductsFilter = () => {    
-    const allProductsData = allProducts.filter(function(product) {
-      return product.candere_product_type === 'Ring';
-    });
-    setProduct(allProductsData);
+    // const allProductsData = allProducts.filter(function(product) {
+    //   return product.candere_product_type === 'Ring';
+    // });
+    setProduct(allProducts);
   };
 
   const newArrivalsFilter = () => {
