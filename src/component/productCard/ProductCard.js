@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import ReactStars from "react-rating-stars-component";
 import { MdShoppingCart } from "react-icons/md";
 import { AiOutlineHeart } from "react-icons/ai";
-import { IconContext } from "react-icons";
+import { IoIosEye } from "react-icons/io";
 
 const ProductCard = (props) => {
   const products = props.products.slice(0, 12);
@@ -19,6 +19,8 @@ const ProductCard = (props) => {
     setActiveTab(tabName);
     clickFunction();
   };
+
+ 
 
   return (
     <>
@@ -55,25 +57,40 @@ const ProductCard = (props) => {
         <div className="tab_content">
           <div className="product_card_container">
             {products &&
-              products.map((product) => {
+              products.map((product) => {               
                 return (
                   <div className="card product_card" key={product.id}>
                     <div className="card__image">
                       <img src={product.imageEmail} alt={product.name} />
                     </div>
-                    <div className="card__product_details">
+                    <div className="product_title_container">
                       <div className="title">
                         <Link to="/">{product.name}</Link>
                       </div>
+                    </div>
+                    <div className="quick_view">
+                        <IoIosEye />
+                    </div>                      
+                    {
+                      product.product_segment=="BESTSELLERS" ? <div className="product_label bs">Best Sellers</div>
+                      : product.product_segment=="NEW ARRIVALS" ? <div className="product_label na">New Arrivals</div>
+                      : product.product_segment=="HOT" ? <div className="product_label hot">Our Picks</div>
+                      : null
+                    
+                    }
+                    <div className="card__product_details">   
+                      <div className="icon_container">
+                        <AiOutlineHeart />
+                      </div>                   
                       <div className="card__product_price">
                         {product.coupon_offer_price !== 0 ? (
                           <>
-                            <div className="price new_price">
-                              &#x20B9;{Math.trunc(product.coupon_offer_price)}
-                            </div>
                             <div className="price old_price">
                               &#x20B9;{Math.trunc(product.new_price)}
                             </div>
+                            <div className="price new_price">
+                              &#x20B9;{Math.trunc(product.coupon_offer_price)}
+                            </div>                            
                           </>
                         ) : (
                           <div className="price new_price">
@@ -81,6 +98,10 @@ const ProductCard = (props) => {
                           </div>
                         )}
                       </div>
+                      <div className="icon_container">
+                        <MdShoppingCart />
+                      </div>
+                    </div>
                       {product.product_rating && (
                         <div className="stars_container">
                           <ReactStars
@@ -111,24 +132,7 @@ const ProductCard = (props) => {
                             activeColor="#FF8C40"
                           />
                         </div>
-                      )}                      
-                    </div>
-                    <div className="cart_container">
-                        <div className="cartContainer">
-                            <IconContext.Provider
-                            value={{ color: "black", className: "iconContainer" }}
-                            >
-                            <MdShoppingCart />
-                            </IconContext.Provider>
-                        </div>
-                        <div className="wishlistContainer">
-                            <IconContext.Provider
-                                value={{ color: "black", className: "iconContainer" }}
-                            >
-                                <AiOutlineHeart />
-                            </IconContext.Provider>
-                        </div>
-                    </div>                    
+                      )}                  
                   </div>
                 );
               })}

@@ -71,7 +71,7 @@ const HeaderMiddle=()=>{
                       </span>
                       <span className="small_text">Personal Information</span>
                     </div>
-                    <div class="angle_right">
+                    <div className="angle_right">
                       <FiChevronRight />
                     </div>
                   </Link>
@@ -82,7 +82,7 @@ const HeaderMiddle=()=>{
                       </span>
                       <span className="small_text">My Order</span>
                     </div>
-                    <div class="angle_right">
+                    <div className="angle_right">
                       <FiChevronRight />
                     </div>
                   </Link>
@@ -93,7 +93,7 @@ const HeaderMiddle=()=>{
                       </span>
                       <span className="small_text">My Wishlist</span>
                     </div>
-                    <div class="angle_right">
+                    <div className="angle_right">
                       <FiChevronRight />
                     </div>
                   </Link>
